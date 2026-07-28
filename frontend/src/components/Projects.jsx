@@ -5,31 +5,31 @@ const projects = [
   {
     title: "Cootranar - Plataforma de Tiquetes",
     description:
-      "Plataforma web para la compra de tiquetes de transporte terrestre, gestión de encomiendas y facturación electrónica. Incluye autenticación de usuarios, reservas y diseño responsive.",
+      "Plataforma de transporte terrestre con compra de tiquetes online, gestión de encomiendas y facturación electrónica. Sistema completo con autenticación y panel administrativo.",
     technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
     github: "https://github.com/cdlandazuri222/Nari-o-Wed.git",
     demo: "https://plataformae-comert.vercel.app",
-    status: "En proceso",
+    status: "85%",
     gradient: "from-blue to-cyan",
   },
   {
-    title: "Nariño Web",
+    title: "Nariño Web - Turismo",
     description:
-      "Aplicación web para mostrar información y recursos turísticos de la región de Nariño. Desarrollada con Angular.",
+      "Portal turístico de la región de Nariño que muestra destinos, rutas, cultura y gastronomía local. Diseño atractivo pensado para promover el turismo regional.",
     technologies: ["Angular", "TypeScript", "CSS"],
     github: "https://github.com/cdlandazuri222/Nari-o-Wed.git",
-    demo: null,
-    status: "En proceso",
+    demo: "https://nari-o-wed.vercel.app",
+    status: "15%",
     gradient: "from-purple to-blue",
   },
   {
     title: "Sistema de Reservas - Peluquería",
     description:
-      "Aplicación web para gestionar reservas y citas en una peluquería. Los clientes pueden agendar servicios, ver disponibilidad y recibir confirmaciones.",
+      "App web para agendar citas en peluquería con calendario interactivo, disponibilidad en tiempo real y confirmación automática. Incluye panel de administración para el negocio.",
     technologies: ["React", "Tailwind CSS", "Node.js", "MySQL"],
     github: "https://github.com/cdlandazuri222",
-    demo: null,
-    status: "En proceso",
+    demo: "https://peluqueria-opal.vercel.app",
+    status: "65%",
     gradient: "from-cyan to-purple",
   },
 ];
@@ -75,12 +75,24 @@ export default function Projects() {
                   </div>
                   <div className="flex items-center gap-3">
                     {project.status && (
-                      <span className="text-[10px] px-2.5 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 font-medium">
+                      <span className="text-[10px] px-2.5 py-1 rounded-full bg-blue/10 text-blue-light border border-blue/20 font-medium">
                         {project.status}
                       </span>
                     )}
                   </div>
                 </div>
+
+                {/* Progress bar */}
+                {project.status && (
+                  <div className="mb-4">
+                    <div className="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+                      <div
+                        className={`h-full rounded-full bg-gradient-to-r ${project.gradient}`}
+                        style={{ width: project.status }}
+                      />
+                    </div>
+                  </div>
+                )}
 
                 {/* Title */}
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-light transition-colors">
