@@ -39,7 +39,7 @@ export default function About() {
             Sobre mí
           </h2>
           <p className="text-gray-400 leading-relaxed text-base md:text-lg max-w-2xl mx-auto">
-            Soy estudiante de últimos semestres de Ingeniería de Sistemas con
+            Soy estudiante de último semestres de Ingeniería de Sistemas con
             enfoque en desarrollo web y bases de datos. Me apasiona construir
             interfaces modernas y diseñar estructuras de datos eficientes.
             Disfruto trabajar con metodologías ágiles como Scrum porque valoro
