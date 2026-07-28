@@ -7,7 +7,7 @@ const projects = [
     description:
       "Plataforma de transporte terrestre con compra de tiquetes online, gestión de encomiendas y facturación electrónica. Sistema completo con autenticación y panel administrativo.",
     technologies: ["React", "Tailwind CSS", "JavaScript", "Vite"],
-    github: "https://github.com/cdlandazuri222/Nari-o-Wed.git",
+    github: null,
     demo: "https://plataformae-comert.vercel.app",
     status: "85%",
     gradient: "from-blue to-cyan",
@@ -118,16 +118,18 @@ export default function Projects() {
 
                 {/* Links */}
                 <div className="flex items-center gap-5 pt-4 border-t border-white/5">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-xs text-gray-500 hover:text-white transition-colors duration-200"
-                    aria-label={`Ver código de ${project.title} en GitHub`}
-                  >
-                    <FiGithub className="w-4 h-4" />
-                    Código
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-xs text-gray-500 hover:text-white transition-colors duration-200"
+                      aria-label={`Ver código de ${project.title} en GitHub`}
+                    >
+                      <FiGithub className="w-4 h-4" />
+                      Código
+                    </a>
+                  )}
                   {project.demo && (
                     <a
                       href={project.demo}
