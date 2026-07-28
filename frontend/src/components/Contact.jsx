@@ -38,7 +38,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-28 px-6 relative">
+    <section id="contacto" className="py-16 md:py-28 px-4 sm:px-6 relative">
       {/* Fondo sutil */}
       <div className="absolute inset-0 bg-gradient-to-t from-dark-light/30 to-transparent" />
 
@@ -57,13 +57,13 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-5 gap-10">
+        <div className="grid lg:grid-cols-5 gap-8 md:gap-10">
           {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-2 space-y-3"
+            className="lg:col-span-2 grid sm:grid-cols-2 lg:grid-cols-1 gap-3"
           >
             {contacts.map((item) => {
               const content = (
@@ -108,7 +108,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="md:col-span-3 space-y-4"
+            className="lg:col-span-3 space-y-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <input

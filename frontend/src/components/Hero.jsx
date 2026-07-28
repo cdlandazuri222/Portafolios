@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden pt-20 md:pt-0"
     >
       {/* Partículas 3D de fondo */}
       <ParticlesWrapper />
@@ -48,15 +48,15 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl w-full mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl w-full mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Texto */}
-        <div>
+        <div className="order-2 md:order-1 text-center md:text-left">
           <motion.div
             custom={0}
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue/10 border border-blue/20 mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue/10 border border-blue/20 mb-6 mx-auto md:mx-0"
           >
             <span className="text-xs">💻</span>
             <span className="text-xs text-blue-light font-medium">
@@ -69,7 +69,7 @@ export default function Hero() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.1] mb-5 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.1] mb-5 tracking-tight"
           >
             Cristian David{" "}
             <span className="bg-gradient-to-r from-blue via-cyan to-blue-light bg-clip-text text-transparent">
@@ -82,7 +82,7 @@ export default function Hero() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-gray-400 text-base md:text-lg leading-relaxed mb-8 max-w-lg"
+            className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0"
           >
             Desarrollador Web Junior y estudiante de Ingeniería de Sistemas.
             Construyo desde interfaces modernas hasta bases de datos, creando
@@ -94,7 +94,7 @@ export default function Hero() {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap gap-3"
+            className="flex flex-wrap justify-center md:justify-start gap-3"
           >
             <a
               href="#proyectos"
@@ -120,7 +120,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
-          className="flex justify-center"
+          className="flex justify-center order-1 md:order-2"
         >
           <div className="relative">
             {/* Anillos animados */}
@@ -139,7 +139,7 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue/40 to-cyan/40 blur-3xl scale-110" />
 
             {/* Foto */}
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-blue via-cyan to-purple p-[3px] shadow-2xl shadow-blue/20">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-blue via-cyan to-purple p-[3px] shadow-2xl shadow-blue/20">
               <img
                 src={profileImg}
                 alt="Cristian David Landazuri Mambuscay"

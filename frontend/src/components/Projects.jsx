@@ -36,7 +36,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="proyectos" className="py-28 px-6">
+    <section id="proyectos" className="py-16 md:py-28 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {projects.map((project, idx) => (
             <motion.article
               key={project.title}

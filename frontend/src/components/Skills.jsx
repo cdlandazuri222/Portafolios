@@ -61,7 +61,7 @@ const categories = [
 
 export default function Skills() {
   return (
-    <section id="tecnologias" className="py-28 px-6 relative">
+    <section id="tecnologias" className="py-16 md:py-28 px-4 sm:px-6 relative">
       {/* Fondo sutil */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark-light/50 to-transparent" />
 
@@ -80,7 +80,7 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {categories.map((category, idx) => (
             <motion.div
               key={category.title}

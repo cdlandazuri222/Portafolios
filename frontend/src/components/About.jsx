@@ -26,7 +26,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="py-28 px-6">
+    <section id="sobre-mi" className="py-16 md:py-28 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ export default function About() {
         </motion.div>
 
         {/* Highlights */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {highlights.map((item, idx) => (
             <motion.div
               key={item.title}
